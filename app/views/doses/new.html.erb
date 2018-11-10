@@ -1,0 +1,11 @@
+<h1>Want to create a new dose?</h1>
+<p>alright, whatever.</p>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
+
+
+<%= link_to "Want to create a cocktail? ok. whatever.", cocktails_path, class: 'card-link' %>

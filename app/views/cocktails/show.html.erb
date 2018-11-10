@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1> <%= "You created: #{@cocktail.name}" %> </h1>
+
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= "#{dose.description} of #{dose.ingredient.name}" %>
+          </li>
+        <% end %>
+      </ul>
+
+      <%= link_to "Create dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+
+    </div>
+  </div>
+</div>
+
